@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2><p>Please provide us you comments or compliants here.<br> Thank you for sharing!</p></h2>
+        <form action="contactus" method="post">
+            Full name: <input placeholder="First Name" name="firstname">
+            <select name="opt">
+                <option>Suggestion</option>
+                <option>Compliant</option>
+            </select><br><br>
+            Enter your comment: <br>
+            <textarea rows="4" cols="50" name="comment"></textarea>
+            <input type="hidden" name="_csrf" value="<% 151511 %>">
+            <br><input type="submit" value="Submit">
+        </form>
+
+  </body>
+</html>

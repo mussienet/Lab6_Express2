@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thank you</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%if (errors) { %>
+
+          <table border=2 width="400">
+              <% for(var i=0; i<errors.length; i++) { %>
+                  <li>
+                          <h1><%= errors[i].msg %></h1>
+                  </li>
+              <% } %>
+              <button onclick="goBack()">Go Back</button>
+          </table>
+          
+
+          <script>
+          function goBack() {
+              window.history.back();
+          }
+          </script>
+
+    <% } %>
+    <%if (errors.length==0) { %>
+          
+          <h1>Thank you: <%= username %></h1>
+          <p>...for sharing us your thoughts.</p>
+    <% } %>
+  </body>
+</html>
